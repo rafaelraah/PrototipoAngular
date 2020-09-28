@@ -1,0 +1,47 @@
+<div class="container h-100" style="margin-top: 100px;">
+
+    <h3>Interpolation</h3>
+
+    <p [ngClass]="{ 
+        'text-secondary': contadorClique < 3,
+        'text-success': contadorClique >= 3,
+        'text-warning': contadorClique >= 5,
+        'text-danger': contadorClique >= 9
+        }">O número de cliques é: {{ contadorClique }}</p>
+
+    <br><br>
+
+    <h3>Property Binding</h3>
+
+    <img [src]="urlImagem" height="50px" width="50px" />
+
+    <button class="btn btn-info" [disabled]="contadorClique >= 10">Vai desativar depois de 10 cliques.</button> <br><br>
+
+    <br>
+
+    <h3>Event Binding</h3>
+    <button class="btn btn-warning" (click)='adicionarClique()'>Clique-me</button> &nbsp;
+    <button class="btn btn-danger" (click)='zerarContador()' [disabled]="contadorClique < 10">Zerar Contador depois de
+        10</button>
+
+    <br><br>
+
+    <h3>Two-way Binding</h3>
+
+    <!--Simulação de two-way binding, mas não é two-way binding: -->
+    <input type="text" (keyup)='KeyUp($event)' placeholder="Digite o seu nome" /> <br>
+    <label>Seu nome é: {{ nome }}</label>
+    <br><br>
+
+    <!--Two-way binding real: -->
+    <input type="text" [ngModel]="nomeTwoWay" (ngModelChange) = 'nomeTwoWay = $event' placeholder="Digite seu nome" /><br>
+    <label>Seu nome é: {{ nomeTwoWay }}</label>
+    <br><br>
+
+    <!--Outra maneira mais interessante de utilizar o Two-way Binding: -->
+    <input type="text" [(ngModel)]="nomeTwoWayOutraManeira" placeholder="Digite seu nome ou uma Class" /><br>
+    <label class="{{ nomeTwoWayOutraManeira }}">Seu nome é: {{ nomeTwoWayOutraManeira }}</label>
+    <br>
+    <label [ngClass]="nomeTwoWayOutraManeira">Seu nome é: {{ nomeTwoWayOutraManeira }}</label>
+
+</div>

@@ -1,0 +1,46 @@
+{
+    "produtos": [
+        {
+            "id": 1,
+            "nome": "Teclado Microsoft",
+            "valor": 59.00,
+            "promocao": true,
+            "valorPromo": 10.0,
+            "imagem": "teclado.jpg"
+        },
+        {
+            "id": 2,
+            "nome": "Mouse Apple",
+            "valor": 1000.00,
+            "promocao": false,
+            "valorPromo": 0,
+            "imagem": "mouse.jpg"
+        },
+        {
+            "id": 3,
+            "nome": "Headset Corsair",
+            "valor": 630.00,
+            "promocao": true,
+            "valorPromo": 50.0,
+            "imagem": "headset.jpg"
+        },
+        {
+            "id": 4,
+            "nome": "Monitor Samsung",
+            "valor": 1000.00,
+            "promocao": false,
+            "valorPromo": 0,
+            "imagem": "monitor.jpg"
+        },
+        {
+            "id": 5,
+            "nome": "Cabo USB",
+            "valor": 30.00,
+            "promocao": true,
+            "valorPromo": 5.00,
+            "imagem": "cabo.jpg"
+        }
+        
+    ]
+}
+
